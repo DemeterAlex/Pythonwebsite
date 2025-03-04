@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Moje Super Homepage</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <script defer src="{{ url_for('static', filename='script.js') }}"></script>
+</head>
+<body>
+    <div class="container">
+        <h1>Ahoj Světe</h1>
+        <p id="dynamic-text">Načítám obsah...</p>
+        <button onclick="loadQuote()">Zobrazit citát dne</button>
+    </div>
+</body>
+</html>
