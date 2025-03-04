@@ -1,8 +1,7 @@
-import os
 from flask import Flask, render_template, jsonify
+import random
 
-# Flask nyní hledá šablony v aktuální složce i v "templates/"
-app = Flask(__name__, template_folder=".")
+app = Flask(__name__)
 
 quotes = [
     "Život je to, co se děje, když jste zaneprázdněni jinými plány.",
@@ -14,8 +13,6 @@ quotes = [
 
 @app.route("/")
 def home():
-    if not os.path.exists("index.html"):
-        return "Chyba: Soubor index.html nebyl nalezen!", 500
     return render_template("index.html")
 
 @app.route("/api/quote")
